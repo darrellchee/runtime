@@ -18,7 +18,7 @@ extern "C" {
 //
 // On other platforms the value is queried from the OS once and cached; the
 // definition lives in ospagesize.c so there is exactly one cache per process.
-#if defined(HOST_WASM)
+#if defined(HOST_WASMARCH)
 inline uint32_t minipal_getpagesize(void)
 {
     // WASM has no hardware pages; getpagesize() returns the 64KB memory.grow granularity,
